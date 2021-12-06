@@ -11,11 +11,11 @@ def count_window_increases(measurements)
   count_increases(windows)
 end
 
-data = test_file_data.map(&:to_i)
+data = test_file_data.split.map(&:to_i)
 assert(7, count_increases(data))
 assert(5, count_window_increases(data))
 puts
 
-data = file_data.map(&:to_i)
+data = file_data.split.map(&:to_i)
 puts "total increases: #{count_increases(data)}"
 puts "window increases: #{count_window_increases(data)}"

@@ -32,8 +32,8 @@ def position_with_aim(movements)
   horizontal * depth
 end
 
-assert(150, position(test_file_data))
-puts position(file_data)
+assert(150, position(test_file_data.split))
+puts position(file_data.split)
 
-assert(900, position_with_aim(test_file_data))
-puts position_with_aim(file_data)
+assert(900, position_with_aim(test_file_data.split))
+puts position_with_aim(file_data.split)

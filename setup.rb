@@ -17,9 +17,13 @@ def assert(expected, actual)
 end
 
 def file_data
-  File.read('input').split
+  day = File.basename(Dir.pwd).to_i
+  unless File.file?('input')
+    `curl https://adventofcode.com/2021/day/#{day}/input --cookie "session=#{ENV['SESSION']}" -o input`
+  end
+  File.read('input')
 end
 
 def test_file_data
-  File.read('test').split
+  File.read('test')
 end
